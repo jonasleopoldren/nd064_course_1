@@ -6,11 +6,12 @@ on:
   push:
     branches:
       - 'main'
+  workflow_dispatch:
 
 jobs:
   docker:
     # Run the action on the ubuntu-latest operating system
-    runs-on: [ubuntu-latest, workflow_dispatch]
+    runs-on: ubuntu-latest
     
     steps:
     # Use the Build and Push Docker images(opens in a new tab) upstream GitHub Action as the basis
