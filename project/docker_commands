@@ -1,11 +1,46 @@
-## Docker commands used to build the application 
-# TODO: insert the docker build command
+## Docker commands used to build the application
+# Reference the defined Dockerfile
+# Tag the image as techtrends
+# Make sure you specify the location of the Dockerfile
+docker build --file C:\udacity\git\nd064_course_1-project\project\Dockerfile --tag techtrends .\project
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+# Using the detached mode
+# Expose the application port on port 7111 on the host machine, e.g., use the -p 7111:3111 option.
+docker run --detach -p 7111:3111 --name techtrends techtrends
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+docker logs techtrends
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+* Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+[2024-06-20 07:45:26,417] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2024-06-20 07:45:26,417] INFO in _internal:  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+[2024-06-20 07:45:39,031] INFO in app: About page retrieved!
+[2024-06-20 07:45:39,040] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:45:39] "GET /about HTTP/1.1" 200 -
+[2024-06-20 07:45:39,052] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:45:39] "GET /static/css/main.css HTTP/1.1" 200 -
+[2024-06-20 07:45:39,109] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:45:39] "GET /favicon.ico HTTP/1.1" 404 -
+[2024-06-20 07:45:42,570] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:45:42] "GET / HTTP/1.1" 200 -
+[2024-06-20 07:45:42,579] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:45:42] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-06-20 07:49:03,582] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:49:03] "GET /create HTTP/1.1" 200 -
+[2024-06-20 07:49:03,594] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:49:03] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-06-20 07:49:26,621] INFO in app: New article created: "test new post"!
+[2024-06-20 07:49:26,621] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:49:26] "POST /create HTTP/1.1" 302 -
+[2024-06-20 07:49:26,633] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:49:26] "GET / HTTP/1.1" 200 -
+[2024-06-20 07:49:26,646] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:49:26] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-06-20 07:52:13,904] INFO in app: About page retrieved!
+[2024-06-20 07:52:13,904] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:52:13] "GET /about HTTP/1.1" 200 -
+[2024-06-20 07:52:13,915] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:52:13] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-06-20 07:52:16,032] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:52:16] "GET / HTTP/1.1" 200 -
+[2024-06-20 07:52:16,042] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:52:16] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-06-20 07:52:18,656] INFO in app: Article "test new post" retrieved!
+[2024-06-20 07:52:18,660] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:52:18] "GET /7 HTTP/1.1" 200 -
+[2024-06-20 07:52:18,668] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:52:18] "GET /static/css/main.css HTTP/1.1" 304 -
+[2024-06-20 07:52:22,729] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:52:22] "GET / HTTP/1.1" 200 -
+[2024-06-20 07:52:22,737] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:52:22] "GET /static/css/main.css HTTP/1.1" 304 - 
+[2024-06-20 07:55:41,160] INFO in _internal: 172.17.0.1 - - [20/Jun/2024 07:55:41] "GET /metrics HTTP/1.1" 200 -
