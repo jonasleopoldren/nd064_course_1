@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    # Use the Build and Push Docker images(opens in a new tab) upstream GitHub Action as the basis
+    # Use the Build and Push Docker images(https://github.com/marketplace/actions/build-and-push-docker-images) upstream GitHub Action as the basis
     -
       name: Set up QEMU
       uses: docker/setup-qemu-action@v3
@@ -32,7 +32,7 @@ jobs:
       uses: docker/build-push-action@v5
       with:
         # Context should be set to the project directory(https://github.com/udacity/nd064_course_1/tree/main/project).
-        context: https://github.com/udacity/nd064_course_1/tree/main/project
+        context: "{{defaultContext}}:project"
         # Reference the Dockerfile for TechTrends application
         file: Dockerfile
         # Push the image to DockerHub with the tag techtrends:latest
