@@ -31,8 +31,8 @@ jobs:
       name: Build and push
       uses: docker/build-push-action@v5
       with:
-        # Context should be set to the project directory(opens in a new tab).
-        context: https://github.com/jonasleopoldren/nd064_course_1/tree/main/project
+        # Context should be set to the project directory(https://github.com/udacity/nd064_course_1/tree/main/project).
+        context: https://github.com/udacity/nd064_course_1/tree/main/project
         # Reference the Dockerfile for TechTrends application
         file: Dockerfile
         # Push the image to DockerHub with the tag techtrends:latest
