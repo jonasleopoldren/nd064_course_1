@@ -37,5 +37,5 @@ jobs:
         file: Dockerfile
         # Push the image to DockerHub with the tag techtrends:latest
         push: true
-        tags: techtrends:latest
+        tags: jonasleopoldren/techtrends:latest
         
