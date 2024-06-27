@@ -1,0 +1,19 @@
+## provide the name of the namespace
+namespace:
+  name: prod
+## prod replica count
+replicaCount: 5
+## prod service values
+service:
+  port: 7111
+## prod image values
+image:
+  pullPolicy: Always
+## prod resources values
+resources:
+  requests: 
+    memory: 128Mi
+    CPU: 350m
+  limits: 
+    memory: 256Mi
+    CPU: 500m

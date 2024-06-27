@@ -1,0 +1,31 @@
+## provide the name of the namespace
+namespace:
+  name: sandbox
+## default service values
+service:
+  port: 4111
+  targetPort: 3111
+  protocol: TCP
+  type: ClusterIP
+## default image values
+image:
+  repository: jonasleopoldren/techtrends
+  tag: latest
+  pullPolicy: IfNotPresent
+## default replica count
+replicaCount: 1
+## default resources values
+resources:
+  requests: 
+    memory: 64Mi
+    CPU: 250m
+  limits: 
+    memory: 128Mi
+    CPU: 500m
+## default container port
+containerPort: 3111
+## default probe values
+livenessProbe:
+  path: /healthz
+readinessProbe:
+  path: /healthz
